@@ -7,4 +7,22 @@
     align-items: center;
     text-align: center;
     top: 100vh;
+    
+    background-image: 
+        url("images/tinyhouse.jpeg"),
+        url("images/tinyhouse2.jpeg"),
+        url("images/tinyhouse3.jpeg");
+    background-position: 
+        left 10%, 
+        right 10%, 
+        center bottom;
+    background-repeat: 
+        no-repeat, 
+        no-repeat, 
+        no-repeat;
+    background-size: 
+        50% 40%, 
+        50% 40%, 
+        100% 50%;
+    
 }
