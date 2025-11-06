@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Adventures</title>
+    <link rel="stylesheet" href="{% static 'Homepage/Main.css' %}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div class="navbar">
+        <a href="{% url  'homepage' %}" class="btn homepagelink">Homepage</a>
+        <a href="{% url 'booking' %}" class="btn bookinglink">Book a place</a>
+        <a href="{% url  'aboutus' %}" class="btn aboutuslink">Who are we</a>
+    </div>
+    {% block content %}{% endblock %}
+</body>
+</html>

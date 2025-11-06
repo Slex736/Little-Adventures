@@ -1,0 +1,46 @@
+{% extends "Homepage/Main.html" %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'Homepage/AboutUs.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+{% endblock %}
+
+{% block content %}
+    <body>
+        <div class="wrapper">
+            <i id="left" class="fa-solid fa-arrow-left"></i>
+            <ul class="carousel">
+                <li class="card">
+                    <div class="img">
+                        <img src="https://assets.clay.earth/api/images/avatars/optimized/NzAzMDQyOC03MjY1MDI1MTk=" alt="photo" draggable="false" />
+                    </div>
+                    <h2>Sophie Klok</h2>
+                    <span>Ceo</span>
+                </li>
+                <li class="card">
+                    <div class="img">
+                        <img src="https://www.vanasadvocaten.nl/wp-content/uploads/image00039-800x640.jpg" alt = 'Twan' draggable="false" />
+                    </div>
+                    <h2>Julian Pith</h2>
+                    <span>Advocaat</span>
+                </li>
+                <li class="card">
+                <div class="img">
+                        <img src="https://preview.redd.it/9bn393qicap51.jpg?width=320&crop=smart&auto=webp&s=830fdf55bf082dd3826d41571bacbada0e07eb8d" alt = 'dora'  draggable="false" />
+                    </div>
+                    <h2>Isa Blanjaar</h2>
+                    <span>Adventurer</span>
+                </li>
+                <li class="card">
+                <div class="img">
+                        <img src="https://i.thriftbooks.com/api/imagehandler/m/E0C58BC5A8DB35950EFF119866F75E883D01E6C0.jpeg" alt = 'boots'  draggable="false" />
+                    </div>
+                    <h2>Alex Kersten</h2>
+                    <span>Dora's assistent</span>
+                </li>
+            </ul>
+            <i id="right" class="fa-solid fa-arrow-right"></i>
+        </div>
+        <script src="{% static 'Homepage/AboutUs.js' %}"></script>
+    </body>
+{% endblock %}
