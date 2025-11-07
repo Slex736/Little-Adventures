@@ -1,29 +1,66 @@
-.booking-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;   /* optional: vertically center on screen */
-  margin-top: 0;   /* remove the 15% offset if you want full centering */
+body {
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  color: #222;
+  margin: 0;
+  padding: 0;
 }
 
+.booking {
+  max-width: 500px;
+  margin: 4rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
 
-.bookingbtn {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background-color: darkgreen;
-  border: none;
-  font-size: 24px;
+.booking h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label, legend {
   font-weight: bold;
-  color: white;
+}
+
+input[type="date"],
+select {
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.extras {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.total {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 5px;
   cursor: pointer;
 }
-
-.bookingbtn:hover {
-  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
-}
-
-.bookingbtn:active {
-  transform: scale(0.95);
+.btn:hover {
+  background: #256628;
 }

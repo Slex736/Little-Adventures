@@ -2,11 +2,39 @@
 {% load static %}
 
 {% block head %}
-    <link rel="stylesheet" href="{% static 'Homepage/Booking.css' %}">
+<link rel="stylesheet" href="{% static 'Homepage/Booking.css' %}">
 {% endblock %}
 
 {% block content %}
-    <div class="booking-container">
-        <button class="bookingbtn">Book Now</button>
+<section class="booking">
+  <h1>Boek jouw Tiny House</h1>
+  <form id="bookingForm">
+    <label for="date">Datum:</label>
+    <input type="date" id="date" required>
+
+    <label for="house">Kies een huis:</label>
+    <select id="house" required>
+      <option value="">-- Selecteer --</option>
+      <option value="haven" data-price="90">Model Haven (€90/nacht)</option>
+      <option value="bos" data-price="110">Model Bos (€110/nacht)</option>
+      <option value="zee" data-price="130">Model Zee (€130/nacht)</option>
+    </select>
+
+    <fieldset class="extras">
+      <legend>Extra’s</legend>
+      <label><input type="checkbox" value="15"> Houtkachel (€15)</label>
+      <label><input type="checkbox" value="25"> Fietsverhuur (€25)</label>
+      <label><input type="checkbox" value="40"> Ontbijtservice (€40)</label>
+    </fieldset>
+
+    <div class="total">
+      <p>Totaal: <span id="totalPrice">€0</span></p>
     </div>
+
+    <button type="submit" class="btn">Boek Nu</button>
+  </form>
+</section>
+<script src="{% static 'Homepage/Booking.js' %}"></script>
 {% endblock %}
+
+

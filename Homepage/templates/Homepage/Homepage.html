@@ -1,15 +1,56 @@
 {% extends "Homepage/Main.html" %}
-
 {% load static %}
 
 {% block head %}
-    <link rel="stylesheet" href="{% static 'Homepage/Homepage.css' %}">
+<link rel="stylesheet" href="{% static 'Homepage/Homepage.css' %}">
 {% endblock %}
 
 {% block content %}
-    <div class="homepage-content">
-        <h1>Welcome to Little Adventures!</h1>
-        <p>Find your best dream place and house. Then we will make it happen.</p>
+<section class="intro">
+  <h1>Welkom bij Tiny Living</h1>
+  <p>Wij ontwerpen en bouwen compacte, duurzame huizen die groot leven mogelijk maken.</p>
+  <a href="#projecten" class="btn">Bekijk onze projecten</a>
+</section>
+
+<section id="over" class="about">
+  <h2>Over Ons</h2>
+  <p>
+    Tiny Living combineert functionaliteit met minimalistisch design. 
+    Elk huis is maatwerk en ontworpen om efficiënt gebruik te maken van ruimte en energie.
+  </p>
+</section>
+
+<section id="projecten" class="projects">
+  <h2>Projecten</h2>
+  <div class="project-grid">
+    <div class="project-card">
+      <h3>Model Haven</h3>
+      <p>Een praktisch tiny house voor stedelijke omgevingen.</p>
     </div>
-    
+    <div class="project-card">
+      <h3>Model Bos</h3>
+      <p>Volledig gebouwd met hernieuwbare materialen.</p>
+    </div>
+    <div class="project-card">
+      <h3>Model Zee</h3>
+      <p>Compact wonen met uitzicht en comfort.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <h2>Ervaringen van bewoners</h2>
+  <p class="review-text">"Tiny Living veranderde onze kijk op wonen." – Sam & Roos</p>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <form>
+    <input type="text" placeholder="Naam" required>
+    <input type="email" placeholder="E-mail" required>
+    <textarea placeholder="Bericht" rows="4" required></textarea>
+    <button type="submit" class="btn">Verstuur</button>
+  </form>
+</section>
+<script src="{% static 'Homepage/Homepage.js' %}"></script>
 {% endblock %}
