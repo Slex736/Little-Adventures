@@ -9,16 +9,96 @@
 <section class="booking">
   <h1>Boek jouw Tiny House</h1>
   <form id="bookingForm">
-    <label for="date">Datum:</label>
-    <input type="date" id="date" required>
 
-    <label for="house">Kies een huis:</label>
-    <select id="house" required>
-      <option value="">-- Selecteer --</option>
-      <option value="haven" data-price="90">Model Haven (€90/nacht)</option>
-      <option value="bos" data-price="110">Model Bos (€110/nacht)</option>
-      <option value="zee" data-price="130">Model Zee (€130/nacht)</option>
+    <!-- Basic Info -->
+    <h2>Jouw Gegevens</h2>
+    <label for="name">Naam:</label>
+    <input type="text" id="name" name="name" placeholder="Volledige naam" required>
+
+    <label for="email">E-mailadres:</label>
+    <input type="email" id="email" name="email" placeholder="voorbeeld@email.com" required>
+
+    <label for="reason">Waarom wil je een Tiny House huren?</label>
+    <select id="reason" name="reason" required aria-placeholder="-- Selecteer reden --">
+      <option value="wonen">Om in te wonen</option>
+      <option value="vakantie">Voor vakantie</option>
+      <option value="werkplek">Voor werkplek/studio</option>
     </select>
+
+    <!-- Location Info -->
+    <h2>Over de Locatie</h2>
+    <label for="location">Waar wil je het plaatsen?</label>
+    <input type="text" id="location" name="location" placeholder="Adres of gebied" required>
+
+    <label for="ownership">Bezitsstatus:</label>
+    <select id="ownership" name="ownership" required>
+      <option value="">-- Selecteer --</option>
+      <option value="eigen">Ik ben de eigenaar van de grond</option>
+      <option value="huur">Ik huur de grond</option>
+      <option value="anders">Anders</option>
+    </select>
+
+    <label for="space">Is er genoeg vlakke ruimte voor plaatsing?</label>
+    <select id="space" name="space" required>
+      <option value="">-- Selecteer --</option>
+      <option value="ja">Ja</option>
+      <option value="nee">Nee</option>
+    </select>
+
+    <!-- Utilities -->
+    <h2>Voorzieningen</h2>
+    <label><input type="checkbox" name="utilities" value="water"> Water beschikbaar</label>
+    <label><input type="checkbox" name="utilities" value="elektriciteit"> Elektriciteit beschikbaar</label>
+    <label><input type="checkbox" name="utilities" value="riolering"> Septic tank / riool aanwezig</label>
+
+    <!-- Booking Details -->
+    <h2>Boekingsdetails</h2>
+    <label for="start-date">Begindatum:</label>
+    <input type="date" id="start-date" required>
+
+    <label for="end-date">Einddatum:</label>
+    <input type="date" id="end-date" required>
+
+
+    <h2>Kies een huis</h2>
+    <div class="house-selection">
+      <label for="zee" class="house-option">
+        <input type="radio" id="zee" name="huis" value="zee">
+        <img src="{% static 'Homepage/images/zee.jpeg' %}" alt="Boat/Zee Model">
+        <span>Zee Model</span>
+      </label>
+
+      <label for="bos" class="house-option">
+        <input type="radio" id="bos" name="huis" value="bos">
+        <img src="{% static 'Homepage/images/bos.jpeg' %}" alt="Bos Model">
+        <span>Bos Model</span>
+      </label>
+
+      <label for="strand" class="house-option">
+        <input type="radio" id="strand" name="huis" value="strand">
+        <img src="{% static 'Homepage/images/strand.jpeg' %}" alt="Strand Model">
+        <span>Strand Model</span>
+      </label>
+
+      <label for="haven" class="house-option">
+        <input type="radio" id="haven" name="huis" value="haven">
+        <img src="{% static 'Homepage/images/haven.jpeg' %}" alt="Haven Model">
+        <span>Haven Model</span>
+      </label>
+
+      <label for="gras" class="house-option">
+        <input type="radio" id="gras" name="huis" value="gras">
+        <img src="{% static 'Homepage/images/gras.jpeg' %}" alt="Gras Model">
+        <span>Gras Model</span>
+      </label>
+
+      <label for="berg" class="house-option">
+        <input type="radio" id="berg" name="huis" value="berg">
+        <img src="{% static 'Homepage/images/berg.jpeg' %}" alt="Berg Model">
+        <span>Berg Model</span>
+      </label>
+    </div>
+
 
     <fieldset class="extras">
       <legend>Extra’s</legend>
@@ -27,14 +107,29 @@
       <label><input type="checkbox" value="40"> Ontbijtservice (€40)</label>
     </fieldset>
 
+    <!-- Budget and Access -->
+    <h2>Overig</h2>
+    <label for="budget">Wat is je gewenste budget per maand (€)?</label>
+    <input type="number" id="budget" name="budget" placeholder="Bijv. 800" min="0">
+
+    <label for="access">Kan een vrachtwagen het terrein bereiken?</label>
+    <select id="access" name="access" required>
+      <option value="">-- Selecteer --</option>
+      <option value="ja">Ja</option>
+      <option value="nee">Nee</option>
+    </select>
+
+    <!-- Total -->
     <div class="total">
       <p>Totaal: <span id="totalPrice">€0</span></p>
     </div>
 
-    <button type="submit" class="btn">Boek Nu</button>
+    <button type="submit" class="book-button">Verstuur Boekingsaanvraag</button>
   </form>
 </section>
+
 <script src="{% static 'Homepage/Booking.js' %}"></script>
 {% endblock %}
+
 
 

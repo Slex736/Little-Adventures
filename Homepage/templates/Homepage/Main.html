@@ -11,8 +11,8 @@
 <body>
     <div class="navbar">
         <a href="{% url  'homepage' %}" class="btn homepagelink">Homepage</a>
-        <a href="{% url 'booking' %}" class="btn bookinglink">Book a place</a>
-        <a href="{% url  'aboutus' %}" class="btn aboutuslink">Who are we</a>
+        <a href="{% url 'booking' %}" class="btn bookinglink">Boek een huis</a>
+        <a href="{% url  'aboutus' %}" class="btn aboutuslink">Wie zijn wij</a>
     </div>
     {% block content %}{% endblock %}
     <script src="{% static 'Homepage/Main.js' %}"></script>

@@ -14,11 +14,12 @@ section {
 .intro {
   background: #e0f2e9;
   padding: 5rem 10%;
+  margin-top: 10vh;
 }
 .intro h1 { font-size: 2.5rem; margin-bottom: 1rem; }
 .intro p { font-size: 1.1rem; margin-bottom: 1.5rem; }
 
-.btn {
+.btn-project {
   background: #2e7d32;
   color: #fff;
   padding: 0.8rem 1.6rem;
