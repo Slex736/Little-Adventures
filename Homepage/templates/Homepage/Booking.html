@@ -61,7 +61,7 @@
 
 
     <h2>Kies een huis</h2>
-    <div class="house-selection">
+    <div class="house-selection"> 
       <label for="zee" class="house-option">
         <input type="radio" id="zee" name="huis" value="zee">
         <img src="{% static 'Homepage/images/zee.jpeg' %}" alt="Boat/Zee Model">
@@ -110,7 +110,7 @@
     <!-- Budget and Access -->
     <h2>Overig</h2>
     <label for="budget">Wat is je gewenste budget per maand (€)?</label>
-    <input type="number" id="budget" name="budget" placeholder="Bijv. 800" min="0">
+    <input type="number" id="budget" name="budget" placeholder="Bijv. 800" min="0" required>
 
     <label for="access">Kan een vrachtwagen het terrein bereiken?</label>
     <select id="access" name="access" required>

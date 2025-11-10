@@ -52,7 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
     for (const util of selectedUtilities) {
       totalPrice += utilities[util] || 0;
     }
-
+    if (isNaN(totalPrice.toFixed(2))) {
+        totalPrice = 0;
+    } 
     totalPriceElement.textContent = `€${totalPrice.toFixed(2)}`;
   }
 
