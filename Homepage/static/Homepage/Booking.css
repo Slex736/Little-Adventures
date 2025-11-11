@@ -63,7 +63,7 @@
 /* ===== General Layout ===== */
 .booking {
   max-width: 750px;
-  margin: 3rem auto;
+  margin: 10vh auto;
   padding: 2rem 2.5rem;
   background: #ffffff;
   border-radius: 1rem;

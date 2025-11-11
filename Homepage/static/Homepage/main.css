@@ -35,4 +35,7 @@
     height: 20vh;
 }
 
-
+.logo {
+    height: 60px;
+    width: auto;
+}
