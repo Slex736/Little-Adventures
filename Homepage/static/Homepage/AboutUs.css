@@ -34,10 +34,25 @@ body {
 }
 #left {
     left: -22px;
+    background-color: rgb(245, 243, 231);
+    transition: transform 0.2s ease;
 }
 #right {
     right: -22px;
+    background-color: rgb(245, 243, 231);
+    transition: transform 0.2s ease;
 }
+
+#left:hover, #right:hover {
+    transform-origin: center center;
+    transform: scale(1.08) translateY(-50%);
+}
+
+#left:active, #right:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+
 .wrapper .carousel {
     display: grid;
     grid-auto-flow: column;
@@ -58,7 +73,7 @@ body {
     scroll-snap-align: start;
     height: 350px;
     list-style: none;
-    background-color: beige;
+    background-color: rgb(245, 243, 231);
     cursor: pointer;
     padding-bottom: 15px;
     flex-direction: column;
