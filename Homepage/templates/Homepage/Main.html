@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Little Adventures</title>
-    <link rel="stylesheet" href="{% static 'Homepage/Main.css' %}">
+    <link rel="stylesheet" href="{% static 'Homepage/main.css' %}">
     {% block head %}{% endblock %}
 </head>
 <body>
@@ -15,6 +15,6 @@
         <a href="{% url  'aboutus' %}" class="btn aboutuslink">Wie zijn wij</a>
     </div>
     {% block content %}{% endblock %}
-    <script src="{% static 'Homepage/Main.js' %}"></script>
+    <script src="{% static 'Homepage/main.js' %}"></script>
 </body>
 </html>
