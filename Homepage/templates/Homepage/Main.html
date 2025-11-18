@@ -10,7 +10,9 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="{% url  'homepage' %}" class="btn homepagelink">Homepage</a>
+        <a href="{% url  'homepage' %}" class="logolink homepagelink">
+            <img src="{% static 'Homepage/Images/Logo.png' %}" alt="Little Adventures Logo" class="logo">
+        </a>
         <a href="{% url 'booking' %}" class="btn bookinglink">Boek een huis</a>
         <a href="{% url  'aboutus' %}" class="btn aboutuslink">Wie zijn wij</a>
     </div>
