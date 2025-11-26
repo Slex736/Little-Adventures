@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function calculateTotalPrice() {
     const housePrices = {
-      gras: 100,
-      bos: 150,
-      zee: 200,
-      berg: 250,
-      haven: 300,
-      strand: 350
+      gras: 35,
+      bos: 40,
+      zee: 100,
+      berg: 60,
+      haven: 75,
+      strand: 75
     };
     const extraPrices = {
       wifi: 10,
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Add space cost
-    if (spaceSelect.value === "ja") totalPrice += 1000;
+    if (spaceSelect.value === "nee") totalPrice += 500;
 
     // Add utilities
     const selectedUtilities = Array.from(
